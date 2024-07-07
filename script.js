@@ -1,9 +1,3 @@
-// add
-// subtract
-// multiply
-// divide
-
-
 function add(num1, num2){
     return num1+num2;
 }
@@ -36,13 +30,30 @@ function operate(operator, num1, num2){
     }
 }
 
+function displayPopulate(digit){
+    const display = document.querySelector(".display");
+    display.textContent = digit.textContent;
+    displayValue = Number(digit.textContent);
+
+    console.log(displayValue);
+}
+
 let number1 = 0;
 let number2 = 0;
 let operator = '';
+let displayValue = '';
 
-console.log('Hello world')
 
-console.log(operate('+', 2, 2));    // 4
-console.log(operate('-', 2, 2));    // 0
-console.log(operate('*', 2, 5));    // 10
-console.log(operate('/', 10, 2));    // 5
+const digitButton = document.querySelectorAll(".digitButton");
+
+for (const digits of digitButton){
+    digits.addEventListener("click", () => displayPopulate(digits));
+}
+// console.log(digitButton);
+// display();
+
+
+// console.log(operate('+', 2, 2));    // 4
+// console.log(operate('-', 2, 2));    // 0
+// console.log(operate('*', 2, 5));    // 10
+// console.log(operate('/', 10, 2));    // 5
