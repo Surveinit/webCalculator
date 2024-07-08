@@ -81,7 +81,7 @@ function splitting(){
         displayPopulate(displayValue); 
     }
 
-    console.log(display.textContent, gNumber1, gNumber2, gOperator);
+    // console.log(display.textContent, gNumber1, gNumber2, gOperator);
 }
 
 function displayPopulate(digit){
@@ -96,6 +96,10 @@ function displayPopulate(digit){
 
 }
 
+function clearDisplay(){
+    display.textContent = '';
+}
+
 let gNumber1 = 0;
 let gNumber2 = 0;
 let gOperator = '';
@@ -105,6 +109,7 @@ const display = document.querySelector(".display");
 const digitButton = document.querySelectorAll(".digitButton");
 const operatorButton = document.querySelectorAll(".operatorButton");
 const equalButton = document.querySelector(".equalButton");
+const clearButton = document.querySelector(".clearButton");
 
 for (const digits of digitButton){
     digits.addEventListener("click", () => displayPopulate(digits));
@@ -115,6 +120,7 @@ for (const operator of operatorButton){
 }
 
 equalButton.addEventListener("click", () => splitting());
+clearButton.addEventListener("click", () => clearDisplay())
 // console.log(digitButton);
 // display();
 
