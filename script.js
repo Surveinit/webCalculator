@@ -30,25 +30,91 @@ function operate(operator, num1, num2){
     }
 }
 
-function displayPopulate(digit){
-    const display = document.querySelector(".display");
-    display.textContent = digit.textContent;
-    displayValue = Number(digit.textContent);
+function splitting(){
+    let operators = ['+','-','*','/']; 
 
-    console.log(displayValue);
+    if(display.textContent.includes('+')){
+        let plusArr = display.textContent.split('+');
+        gNumber1 = Number(plusArr[0]);
+        gNumber2 = Number(plusArr[1]);
+        gOperator = '+';
+        displayValue = operate(gOperator, gNumber1, gNumber2);
+
+        // console.log(gNumber1, gOperator, gNumber2, displayValue);
+        // console.log(displayValue, typeof(displayValue));
+        displayPopulate(displayValue);  
+    }
+
+    if(display.textContent.includes('-')){
+        let subArr = display.textContent.split('-');
+        gNumber1 = Number(subArr[0]);
+        gNumber2 = Number(subArr[1]);
+        gOperator = '-';
+        displayValue = operate(gOperator, gNumber1, gNumber2);
+
+        // console.log(gNumber1, gOperator, gNumber2, displayValue);
+        // console.log(displayValue, typeof(displayValue));
+        displayPopulate(displayValue); 
+    }
+
+    if(display.textContent.includes('*')){
+        let mulArr = display.textContent.split('*');
+        gNumber1 = Number(mulArr[0]);
+        gNumber2 = Number(mulArr[1]);
+        gOperator = '*';
+        displayValue = operate(gOperator, gNumber1, gNumber2);
+
+        // console.log(gNumber1, gOperator, gNumber2, displayValue);
+        // console.log(displayValue, typeof(displayValue));
+        displayPopulate(displayValue); 
+    }
+
+    if(display.textContent.includes('/')){
+        let divArr = display.textContent.split('/');
+        gNumber1 = Number(divArr[0]);
+        gNumber2 = Number(divArr[1]);
+        gOperator = '/';
+        displayValue = operate(gOperator, gNumber1, gNumber2);
+
+        // console.log(gNumber1, gOperator, gNumber2, displayValue);
+        // console.log(displayValue, typeof(displayValue));
+        displayPopulate(displayValue); 
+    }
+
+    console.log(display.textContent, gNumber1, gNumber2, gOperator);
 }
 
-let number1 = 0;
-let number2 = 0;
-let operator = '';
+function displayPopulate(digit){
+    if (typeof(digit) === 'number'){
+        display.textContent = digit;
+    }
+    else{
+        display.textContent += digit.textContent;    
+    }
+    
+    // displayValue = Number(digit.textContent);
+
+}
+
+let gNumber1 = 0;
+let gNumber2 = 0;
+let gOperator = '';
 let displayValue = '';
 
-
+const display = document.querySelector(".display");
 const digitButton = document.querySelectorAll(".digitButton");
+const operatorButton = document.querySelectorAll(".operatorButton");
+const equalButton = document.querySelector(".equalButton");
 
 for (const digits of digitButton){
     digits.addEventListener("click", () => displayPopulate(digits));
 }
+
+for (const operator of operatorButton){
+    operator.addEventListener("click", (e) => displayPopulate(operator));
+}
+
+equalButton.addEventListener("click", () => splitting());
 // console.log(digitButton);
 // display();
 
