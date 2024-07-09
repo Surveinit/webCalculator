@@ -1,3 +1,3 @@
-# Web Calculator 🧮
+# Teenage Engineering Inspired - Web Calculator 🧮
 <br>
 This project is a simple web-based calculator built using HTML, CSS, and JavaScript. It features a user-friendly interface and basic arithmetic operations such as addition, subtraction, multiplication, and division. The calculator is designed to provide a straightforward and interactive experience for users. This project is part of The Odin Project curriculum, showcasing practical implementation of web development skills. Feel free to clone the repository and explore the code to learn more about its implementation. 🚀
