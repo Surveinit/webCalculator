@@ -100,6 +100,11 @@ function clearDisplay(){
     display.textContent = '';
 }
 
+function backSpace(){
+    console.log(display.textContent);
+    display.textContent = display.textContent.slice(0, -1);
+}
+
 let gNumber1 = 0;
 let gNumber2 = 0;
 let gOperator = '';
@@ -110,6 +115,7 @@ const digitButton = document.querySelectorAll(".digitButton");
 const operatorButton = document.querySelectorAll(".operatorButton");
 const equalButton = document.querySelector(".equalButton");
 const clearButton = document.querySelector(".clearButton");
+const backspaceButton = document.querySelector(".backspaceButton");
 
 for (const digits of digitButton){
     digits.addEventListener("click", () => displayPopulate(digits));
@@ -120,7 +126,9 @@ for (const operator of operatorButton){
 }
 
 equalButton.addEventListener("click", () => splitting());
-clearButton.addEventListener("click", () => clearDisplay())
+clearButton.addEventListener("click", () => clearDisplay());
+backspaceButton.addEventListener("click", () => backSpace());
+
 // console.log(digitButton);
 // display();
 
