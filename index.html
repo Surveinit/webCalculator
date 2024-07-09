@@ -13,6 +13,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
@@ -20,40 +24,57 @@
     <title>webCalc</title>
 </head>
 <body>
-    <div class="mainContainer">
+    <h1 style="font-family: 'Inconsolata', serif;">webCalc</h1>
+    <div class="tiffin">
 
-        <div class="displayContainer">
-            <div class="display"></div>
+        <div class="mainContainer">
+
+            <div class="displayContainer">
+                <div class="display">6969</div>
+            </div>
+    
+    
+            <div class="allButtons">
+    
+    
+                <div class="row1">
+                    <button class="digitButton">7</button>
+                    <button class="digitButton">9</button>
+                    <button class="digitButton">8</button>
+                    <button class="clearButton">C</button>
+                </div>
+    
+                <div class="row2">
+                    <button class="digitButton">4</button>
+                    <button class="digitButton">5</button>
+                    <button class="digitButton">6</button>
+                    <button class="operatorButton">/</button>
+                </div>
+    
+                <div class="row3">
+                    <button class="digitButton">1</button>
+                    <button class="digitButton">2</button>
+                    <button class="digitButton">3</button>
+                    <button class="operatorButton">*</button>
+                </div>
+                
+                <div class="row4">
+                    <button class="speaker">~</button>
+                    <button class="digitButton">0</button>
+                    <button class="speaker">~</button>
+                    <button class="operatorButton">-</button>
+                </div>
+                
+                <div class="row5">
+                    <button class="equalButton">=</button>
+                    <button class="operatorButton">+</button>
+                    <button class="backspaceButton">&lt;</button>
+                </div>
+    
+                
+            </div>
+    
         </div>
-
-        <div class="allButtons">
-            <button class="clearButton">C</button>
-            
-            <button class="operatorButton">/</button>
-            <button class="operatorButton">*</button>
-
-            <button class="digitButton">7</button>
-            <button class="digitButton">8</button>
-            <button class="digitButton">9</button>
-            
-            <button class="operatorButton">-</button>
-            
-            <button class="digitButton">4</button>
-            <button class="digitButton">5</button>
-            <button class="digitButton">6</button>
-            
-            <button class="operatorButton">+</button>
-            
-            <button class="digitButton">1</button>
-            <button class="digitButton">2</button>
-            <button class="digitButton">3</button>
-            
-            <button class="equalButton">=</button>
-            
-            <button class="digitButton">0</button>
-            <button class="backspaceButton">&lt;=</button>
-        </div>
-
     </div>
 </body>
 </html>
