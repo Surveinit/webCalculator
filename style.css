@@ -9,11 +9,11 @@ body{
 }
   
 .mainContainer{
-    width: 380px;
-    height: 520px;
+    width: 300px;
+    height: 450px;
     /* Idea size 380*520 */
     padding: 10px;
-    background-color: #bfbfc1;
+    background: linear-gradient(to right, #cbcbcd, #bfbfc1);
     border: #101213 1px solid;
     border-radius: 4px;
     display: flex;
@@ -24,7 +24,7 @@ body{
     /* background-color: #101213; */
     background: linear-gradient(to right, #363839, #101213);
     padding: 20px;
-    height: 80px;
+    height: 60px;
     overflow: hidden;
     margin-bottom: 4px;
     border-radius: 2px;
@@ -48,7 +48,7 @@ body{
     background: linear-gradient(to right, #363839, #101213);
     box-shadow: 0px 2px 0px;
     border-radius: 2px;
-    padding: 10px;
+    padding: 20px;
 }
 
 button{
@@ -58,7 +58,7 @@ button{
     font-weight: 500;
     border-radius: 60%;
     font-size: 24px;
-    margin: 2px;
+    margin: 5px;
     box-shadow: 0px 2px 2px;
 
 }
