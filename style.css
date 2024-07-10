@@ -9,11 +9,11 @@ body{
 }
   
 .mainContainer{
-    width: 300px;
+    width: 293px;
     height: 450px;
     /* Idea size 380*520 */
     padding: 10px;
-    background: linear-gradient(to right, #cbcbcd, #bfbfc1);
+    background: linear-gradient(to right, #cfcfd1, #bfbfc1);
     border: #101213 1px solid;
     border-radius: 4px;
     display: flex;
